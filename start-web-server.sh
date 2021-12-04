@@ -1,5 +1,7 @@
 #!/bin/bash
 
-sudo docker exec -it DockerNode cd website && npm i
+cd website
 
-sudo docker exec -it DockerNode node website/bin/www production
+npm i
+
+node bin/www production

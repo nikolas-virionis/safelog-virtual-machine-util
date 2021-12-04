@@ -27,3 +27,5 @@ sudo docker cp Apps/Python/util/ DockerPython:/root/dev/
 sudo docker cp database/ DockerSQL:/root/dev/
 
 cd
+
+sudo docker cp start-web-server.sh DockerNode:/

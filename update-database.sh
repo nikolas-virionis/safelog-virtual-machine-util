@@ -12,4 +12,4 @@ mac_addr=$(sudo docker exec -it DockerPython python3 /root/dev/util/get_update_m
 
 echo "$mac_addr"
 
-sudo docker exec -it DockerSQL mysql -u root -purubu100 -e "$mac_addr"
+sudo docker exec -it DockerSQL mysql -u root -purubu100 safelog

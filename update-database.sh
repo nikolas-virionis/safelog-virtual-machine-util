@@ -8,8 +8,8 @@ sudo docker exec -it DockerSQL mysql -u root -purubu100 -e "source /root/dev/dat
 
 sudo docker exec -it DockerSQL mysql -u root -purubu100 -e "source /root/dev/database/pivot.sql"
 
-mac_addr=$(sudo docker exec -it DockerPython python3 /root/dev/util/get_mac_addr.py)
+mac_addr=$(sudo docker exec -it DockerPython python3 /root/dev/util/get_update_mac_addr.py)
 
-echo "UPDATE maquina SET id_maquina = '$mac_addr' WHERE nome = 'ec2';"
+echo "$mac_addr"
 
-sudo docker exec -it DockerSQL mysql -u root -purubu100 safelog
+sudo docker exec -it DockerSQL mysql -u root -purubu100 -e "$mac_addr"

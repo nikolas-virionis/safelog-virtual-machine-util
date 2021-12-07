@@ -10,6 +10,8 @@ git pull
 
 sudo docker exec -d DockerNode rm -r website/
 
+sudo docker exec -d DockerNode rm start-web-server.sh
+
 sudo docker exec -d DockerPython rm -r /root/dev/api
 
 sudo docker exec -d DockerPython rm -r /root/dev/util
